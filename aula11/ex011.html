@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistemas para saber se voce e Brasileiro</h1>
+    Digite seu Pais: <input type="string" name="txtnasci" id="txtnasci">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res2"></div>
+    <div id="res"></div>
+    <script>
+        function calcular() {
+            
+        var txtnasci = document.getElementById('txtnasci');
+        var res = document.getElementById('res');
+        // coversao de string para numero
+        var nasci = String(txtnasci.value);
+        res2.innerHTML = `<p>Voce mora no:<strong>${nasci}</strong></p>`;
+        if (nasci != 'Brasil'){
+             res.innerHTML =`<p>Voce e Estrangeiro!</p>`;
+        } else{
+            res.innerHTML =`<p>Voce e Brasileiro!</p>`;
+        }
+    }
+        
+
+    </script>
+</body>
+</html>
